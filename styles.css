@@ -1,0 +1,112 @@
+:root {
+  --bg-color: #f0f0f0;
+  --card-bg: #ffffffcc;
+  --text-color: #111;
+  --grid-border: #333;
+  --box-border: #ccc;
+  --hover-border: #007BFF;
+  --button-bg: #007BFF;
+  --button-text: #fff;
+}
+
+body.dark {
+  --bg-color: #121212;
+  --card-bg: #1f1f1fcc;
+  --text-color: #f9f9f9;
+  --grid-border: #aaa;
+  --box-border: #555;
+  --hover-border: #00D1FF;
+  --button-bg: #00D1FF;
+  --button-text: #000;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.toggle-wrapper {
+  width: 100%;
+  text-align: right;
+  padding: 10px 20px;
+}
+
+#theme-toggle {
+  background: var(--button-bg);
+  color: var(--button-text);
+  border: none;
+  padding: 8px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.game-container {
+  width: 100%;
+  max-width: 700px;
+  background: var(--card-bg);
+  padding: 30px 20px;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  backdrop-filter: blur(12px);
+}
+
+h1 {
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+}
+
+.color-grid-container {
+  margin: 20px 0;
+  padding: 10px;
+  border: 2px solid var(--grid-border);
+  border-radius: 12px;
+}
+
+.color-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(80px, 1fr));
+  gap: 10px;
+}
+
+.color-box {
+  width: 120px;
+  aspect-ratio: 1 / 1;
+  border-radius: 8px;
+  border: 2px solid var(--box-border);
+  cursor: pointer;
+  transition: border-color 0.3s ease-in-out, transform 0.2s;
+}
+
+.color-box:hover {
+  border-color: var(--hover-border);
+  transform: scale(1.05);
+}
+
+.info {
+  margin-top: 10px;
+}
+
+#start-button {
+  margin-top: 20px;
+  padding: 10px 24px;
+  font-size: 1rem;
+  background: var(--button-bg);
+  color: var(--button-text);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+#start-button:hover {
+  transform: scale(1.05);
+}
